@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##Bloccit: a Reddit clone to teach the fundamentals of web development and Rails 4.
 
 Made with my mentor at [Bloc](http://bloc.io).
@@ -29,3 +30,6 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+=======
+# bloccit
+>>>>>>> e27c256153e8620210eb5561fe19c5883dbabcdc
