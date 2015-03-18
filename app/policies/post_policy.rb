@@ -4,7 +4,7 @@ class PostPolicy < ApplicationPolicy
       if user.admin? || user.moderator? 
         scope.all
       else
-        scope.where(:id => user.id).exists?
+        scope.where(user_id: user.id)
       end
     end
   end 

@@ -75,7 +75,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+<<<<<<< HEAD
 
+=======
+>>>>>>> topics-and-posts-assignment
   # http://abena-bloccit.herokuapp.com
    config.action_mailer.default_url_options = { host: 'abena-bloccit.herokuapp.com' }
 end
