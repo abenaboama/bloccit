@@ -47,7 +47,7 @@ gem 'pundit'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'redcarpet'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
