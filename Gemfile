@@ -50,5 +50,8 @@ gem 'pundit'
 gem 'redcarpet'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'carrierwave'
+gem 'mini_magick'
 
+gem 'fog'
 ruby '2.0.0'
