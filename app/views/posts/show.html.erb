@@ -13,5 +13,6 @@
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
     <% end %>
+    <%= will_paginate @post %>
   </div>
 </div>

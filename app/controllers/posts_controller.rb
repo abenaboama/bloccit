@@ -10,9 +10,10 @@ class PostsController < ApplicationController
   #end
 
   def show
-  	   @post = Post.find(params[:id])
+  	   #@post = Post.find(params[:id])
+       @posts = Post.paginate(:page => params[:page])
           @topic = Topic.find(params[:topic_id]) 
-          @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
+          #@posts = @topic.posts.paginate(page: params[:page], per_page: 10)
   end
 
   def new
