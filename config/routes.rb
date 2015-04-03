@@ -16,6 +16,7 @@ Bloccit::Application.routes.draw do
   #get 'topics/edit'
 
   #get 'summaries'
+  #get 'posts'
 
   devise_for :users
      resources :topics do
