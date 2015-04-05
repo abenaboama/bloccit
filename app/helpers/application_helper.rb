@@ -14,3 +14,14 @@ def markdown_to_html(markdown)
   redcarpet = Redcarpet::Markdown.new(renderer, extensions)
   (redcarpet.render markdown).html_safe
 end
+
+def will_paginate( collection )
+    html = ''
+    klass = collection.first.class
+    
+    klass.total_pages.times.each do | page |
+      html += link_to " #{page + 1} ", "/#{klass.to_s.downcase.pluralize}/?page=#{page}"
+    end
+    
+    html.html_safe
+  end
