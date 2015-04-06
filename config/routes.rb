@@ -1,28 +1,14 @@
 Bloccit::Application.routes.draw do
-  #get 'summaries/index'
-
-  #get 'summaries/new'
-
-  #get 'summaries/show'
-
-  #get 'summaries/edit'
-
-  #get 'topics/index'
-
-  #get 'topics/new'
-
-  #get 'topics/show'
-
-  #get 'topics/edit'
-
-  #get 'summaries'
 
   devise_for :users
+     resources :users
+
      resources :topics do
-     resources :posts, except: [:index]
-   end
+     resources :posts, except: [:index] do
+     resources :comments, only: [:create]
      resources :summaries do
    end
+ end
 
 
   get 'about' => 'welcome#about'
@@ -82,4 +68,5 @@ Bloccit::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+ end
 end
