@@ -4,7 +4,7 @@ Bloccit::Application.routes.draw do
      resources :users
 
      resources :topics do
-     resources :posts, except: [:index] do
+     resources :posts, except: [:index] 
      resources :comments, only: [:create]
      resources :summaries do
    end
@@ -68,5 +68,5 @@ Bloccit::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
- end
+
 end
