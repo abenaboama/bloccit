@@ -1,9 +1,8 @@
-<h1><%= @post.markdown_title %></h1>
+<h1><%= markkdown @post.title %></h1>
  
-
 <div class="row">
   <div class="col-md-8">
-    <p><%= @post.markdown_body %></p>
+    <p><%= markkdown @post.body %></p>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>

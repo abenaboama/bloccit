@@ -1,4 +1,4 @@
-<h1>Topics#show</h1>
+<h1>Topics#show</h1> 
 <p>Find me in app/views/topics/show.html.erb</p>
 
 <h1><%= @topic.name %></h1>
@@ -14,10 +14,10 @@
        <div class="media">
          <div class="media-body">
            <h4 class="media-heading">
-              <%= link_to (post.markdown_title), [@topic, post] %>
+              
            </h4>
               <small>
-     submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br/>
+     submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br>
      <%= post.comments.count %> Comments
    </small>
          </div>
