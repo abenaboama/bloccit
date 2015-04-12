@@ -1,26 +1,10 @@
 Bloccit::Application.routes.draw do
-  #get 'summaries/index'
-
-  #get 'summaries/new'
-
-  #get 'summaries/show'
-
-  #get 'summaries/edit'
-
-  #get 'topics/index'
-
-  #get 'topics/new'
-
-  #get 'topics/show'
-
-  #get 'topics/edit'
-
-  #get 'summaries'
 
   devise_for :users
-     resources :topics do
-     resources :posts, except: [:index]
-   end
+   resources :users, only: [:update]
+    resources :topics do
+     resources :posts, except: [:index] 
+  end
      resources :summaries do
    end
 
