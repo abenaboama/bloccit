@@ -3,11 +3,12 @@ Bloccit::Application.routes.draw do
   devise_for :users
    resources :users, only: [:update]
     resources :topics do
-     resources :posts, except: [:index] 
-  end
-     resources :summaries do
-   end
-
+     resources :posts, except: [:index] do
+      resources :comments, only: [:create]
+        resources :summaries do
+  end       
+ end
+end
 
   get 'about' => 'welcome#about'
 
@@ -65,5 +66,4 @@ Bloccit::Application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
 end

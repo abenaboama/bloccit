@@ -52,10 +52,10 @@ require 'faker'
  posts = Post.all
  
  # Create Comments
- 100.times do
+ 700.times do
    Comment.create!(
-       # user: users.sample,   # we have not yet associated Users with Comments
      post: posts.sample,
+     #user: users.sample,
      body: Faker::Lorem.paragraph
    )
  end

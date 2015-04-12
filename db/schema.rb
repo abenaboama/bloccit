@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320002526) do
+ActiveRecord::Schema.define(version: 20150412205145) do
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.text     "body"
     t.integer  "post_id"
     t.datetime "created_at"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20150320002526) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
-  create_table "posts", force: true do |t|
-    t.string   "title"
+  create_table "posts", force: :cascade do |t|
+    t.string   "title",      limit: 255
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -36,45 +36,47 @@ ActiveRecord::Schema.define(version: 20150320002526) do
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
-  create_table "summaries", force: true do |t|
-    t.string   "name"
-    t.boolean  "public",      default: true
+  create_table "summaries", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.boolean  "public",                  default: true
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "topics", force: true do |t|
-    t.string   "name"
-    t.boolean  "public",      default: true
+  create_table "topics", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.boolean  "public",                  default: true
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+  create_table "users", force: :cascade do |t|
+    t.string   "name",                   limit: 255
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "confirmation_token",     limit: 255
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
+    t.string   "unconfirmed_email",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
-    t.string   "avatar"
+    t.string   "role",                   limit: 255
+    t.string   "avatar",                 limit: 255
+    t.integer  "user_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["user_id"], name: "index_users_on_user_id"
 
 end
