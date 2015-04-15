@@ -1,4 +1,4 @@
-<h1><%= markdown @post.title %></h1>
+<h1><%= markdown_to_html @post.title %></h1>
 
 <div class="row">
   <div class="col-md-8">
@@ -7,11 +7,19 @@
        submitted <%= time_ago_in_words(@post.created_at) %> ago by
        <%= @post.user.name %>
      </small>
-    <p><%= markdown @post.body %></p>
+
+   <p><%= markdown_to_html @post.body %></p>
+  </div>
+
+    <h3>Comments</h3>
+    <%= render :partial => "comments/comments", :locals => { :comments => @comments } %>
+    <% if current_user != nil %>
+    <% end %>
+    
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
     <% end %>
   </div>
-</div>
+</div> 
