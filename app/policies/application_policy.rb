@@ -27,7 +27,7 @@ class ApplicationPolicy
   end
 
   def edit?
-    user.present?
+    update?
   end
 
   def destroy?
