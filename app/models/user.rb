@@ -7,12 +7,12 @@ class User < ActiveRecord::Base
   has_many :comments
   
      mount_uploader :avatar, AvatarUploader        
-end
 
-def admin?
+  def admin?
    role == 'admin'
-end
+  end
  
-def moderator?
+  def moderator?
    role == 'moderator'
+  end
 end
