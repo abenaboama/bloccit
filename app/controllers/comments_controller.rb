@@ -3,12 +3,8 @@ class CommentsController < ApplicationController
    @topic = Topic.find(params[:topic_id])
    @post = @topic.posts.find(params[:post_id])
    @comment = @post.comments.new(comment_params)
-<<<<<<< HEAD
-   @comment.user_id = current_user.id
-=======
    @comment.post = @post
    #@comment.user_id = current_user.id
->>>>>>> destroy-checkpoint
 
    if @comment.save
      flash[:notice] = "Comment was saved."
