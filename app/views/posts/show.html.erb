@@ -10,10 +10,9 @@ h1><%= markdown_to_html @post.title %></h1>
 
     <p><%= markdown_to_html @post.body %></p>
     <% if policy(@post.comments.new).create? %>
-    <p><%= render partial: "comments/form", locals: {topic: @topic, post: @post, comment: @post.comments.new} %></p>
+    <%= render partial: 'comments/comment', locals: { topic: @topic, post: @post, comment: comment } %>
     <% end %>
-    <p><%= render partial: 'comments/comment', collection: @post.comments %></p>
-  </div>
+
   <div class="col-md-4">
    <% if policy(@post).edit? %>
    <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
