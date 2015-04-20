@@ -3,8 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
-  has_many :posts 
-     mount_uploader :avatar, AvatarUploader        
+  has_many :posts, dependent: :destroy 
+  has_many :comments, dependent: :destroy
+  mount_uploader :avatar, AvatarUploader        
 
   def admin?
    role == 'admin'
