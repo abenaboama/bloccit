@@ -9,7 +9,11 @@ class PostPolicy < ApplicationPolicy
     end
   end 
 
-  def index?
+   def index?
     true
-  end
-end
+   end
+ end
+
+   def destroy?
+    user.present? && (record.user == user || user.admin? || user.moderator?)
+   end

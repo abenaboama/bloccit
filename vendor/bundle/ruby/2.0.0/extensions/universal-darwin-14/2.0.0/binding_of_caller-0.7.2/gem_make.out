@@ -1,4 +1,4 @@
-/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby -r ./siteconf20150415-7577-cszc18.rb extconf.rb 
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby -r ./siteconf20150417-55846-ip15x0.rb extconf.rb 
 
 make "DESTDIR=" clean
 make: *** No rule to make target `clean'.  Stop.
