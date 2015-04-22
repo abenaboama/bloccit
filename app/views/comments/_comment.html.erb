@@ -1,7 +1,8 @@
 <div class="media">
+  <div class="media-left">
   <% if comment.user.present? %>
- <%= link_to '#', class: 'pull-left' do %>
- <%= image_tag(comment.user.avatar.small.url) if comment.user.avatar? %>
+   <%= link_to '#', class: 'pull-left' do %>
+    <%= image_tag(comment.user.avatar.small.url) if comment.user.avatar? %>
  <% end %>
  <div class="media-body">
    <small>
@@ -10,7 +11,7 @@
 <% comment.destroy %>
 <% end %>
 
-<% if policy(comment).destroy? && comment.body.present? %>
+ <% if policy(comment).destroy? && comment.body.present? %>
        | <%= link_to "Delete", [@topic, @post, comment], method: :delete %>
      <% end %>
    </small>
