@@ -1,18 +1,20 @@
 Bloccit::Application.routes.draw do
 
   devise_for :users
-   resources :users, only: [:update]
+  resources :users, only: [:update]
+    
     resources :topics do
+     resources :posts, except: [:index]
+    end
 
-     resources :posts, except: [:index] do
+    resources :posts, only: [] do
       resources :comments, only: [:create, :destroy]
-       #resources :summaries do
-   end
-  end
+    end
 
   get 'about' => 'welcome#about'
 
   root to: 'welcome#index'
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -67,4 +69,4 @@ Bloccit::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
