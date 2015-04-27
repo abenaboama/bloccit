@@ -54,7 +54,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'fog'
-ruby '2.0.0'
+ruby '2.2.2'
 group :development do
   gem "better_errors"
 end
