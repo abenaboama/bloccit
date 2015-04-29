@@ -4,6 +4,10 @@ class Post < ActiveRecord::Base
   belongs_to :user
      belongs_to :topic
         belongs_to :summary
+
+  def up_votes
+     votes.where(value: 1).count
+  end
      
   default_scope { order('created_at DESC') }
 
