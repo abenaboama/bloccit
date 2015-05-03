@@ -54,5 +54,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'fog'
-ruby '2.0.0'
+ruby '2.2.2'
 gem 'will_paginate', '~> 3.0.5'
