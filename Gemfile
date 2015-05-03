@@ -44,7 +44,7 @@ gem 'pundit'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
+gem 'will_paginate', '~> 3.0.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'redcarpet'
