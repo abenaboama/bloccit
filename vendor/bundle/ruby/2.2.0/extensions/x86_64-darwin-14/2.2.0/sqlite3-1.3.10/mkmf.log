@@ -240,7 +240,11 @@ int t(void) { sqlite3_column_database_name(); return 0; }
 1 warning generated.
 Undefined symbols for architecture x86_64:
   "_sqlite3_column_database_name", referenced from:
+<<<<<<< HEAD
       _t in conftest-b43ded.o
+=======
+      _t in conftest-ca8f48.o
+>>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -293,7 +297,11 @@ int t(void) { sqlite3_enable_load_extension(); return 0; }
 1 warning generated.
 Undefined symbols for architecture x86_64:
   "_sqlite3_enable_load_extension", referenced from:
+<<<<<<< HEAD
       _t in conftest-cb2534.o
+=======
+      _t in conftest-ef5df7.o
+>>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -346,7 +354,11 @@ int t(void) { sqlite3_load_extension(); return 0; }
 1 warning generated.
 Undefined symbols for architecture x86_64:
   "_sqlite3_load_extension", referenced from:
+<<<<<<< HEAD
       _t in conftest-6222de.o
+=======
+      _t in conftest-09bb38.o
+>>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:

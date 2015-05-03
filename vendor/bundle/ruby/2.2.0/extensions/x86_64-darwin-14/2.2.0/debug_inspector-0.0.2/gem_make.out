@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150503-17005-nz3xby.rb extconf.rb
+=======
+/Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150427-70418-z32p8a.rb extconf.rb
+>>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
 creating Makefile
 
 make "DESTDIR=" clean
@@ -8,4 +12,8 @@ compiling debug_inspector.c
 linking shared-object debug_inspector.bundle
 
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20150503-17005-1x8jpmc
+=======
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20150427-70418-s9rm4p
+>>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6

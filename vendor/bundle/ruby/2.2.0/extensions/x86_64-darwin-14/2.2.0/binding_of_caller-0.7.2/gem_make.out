@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150503-17005-cjg8pt.rb extconf.rb
+=======
+/Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150427-70418-1ggqyck.rb extconf.rb
+>>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
 
 make "DESTDIR=" clean
 make: *** No rule to make target `clean'.  Stop.
