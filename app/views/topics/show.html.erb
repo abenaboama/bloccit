@@ -1,4 +1,4 @@
-<h1>Topics#show</h1>
+<h1>Topics#show</h1> 
 <p>Find me in app/views/topics/show.html.erb</p> 
 
 <h1><%= @topic.name %></h1>
@@ -12,6 +12,7 @@
      <p class="lead"><%= @topic.description %></p>
      <% @posts.each do |post| %>
        <div class="media">
+            <%= render partial: 'votes/voter', locals: { post: post } %>
          <div class="media-body">
            <h4 class="media-heading">
               <%= link_to (markdown_to_html post.title), [@topic, post] %>
