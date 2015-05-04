@@ -29,6 +29,7 @@
        <%= pluralize(@post.down_votes, 'down vote') %>
      </small>
     </div>
+    <%= will_paginate @post %>
   </div>
   <% if policy(Comment.new).new? %>
     <div class="col-md-8">

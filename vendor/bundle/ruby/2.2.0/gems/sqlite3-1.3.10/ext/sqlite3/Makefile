@@ -32,12 +32,17 @@ vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
 <<<<<<< HEAD
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20150503-17005-1acrs0
 sitelibdir = $(DESTDIR)./.gem.20150503-17005-1acrs0
 =======
 sitearchdir = $(DESTDIR)./.gem.20150427-70418-1xdet6m
 sitelibdir = $(DESTDIR)./.gem.20150427-70418-1xdet6m
 >>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
+=======
+sitearchdir = $(DESTDIR)./.gem.20150503-91943-12ct8vb
+sitelibdir = $(DESTDIR)./.gem.20150503-91943-12ct8vb
+>>>>>>> will-paginate
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)

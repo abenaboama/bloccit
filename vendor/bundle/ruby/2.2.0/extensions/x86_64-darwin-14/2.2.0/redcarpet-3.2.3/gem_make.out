@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150503-17005-et4cvv.rb extconf.rb
 =======
 /Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150427-70418-r1bocj.rb extconf.rb
 >>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
+=======
+/Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150503-38115-1u5dc8m.rb extconf.rb
+>>>>>>> will-paginate
 creating Makefile
 
 make "DESTDIR=" clean
@@ -71,7 +75,11 @@ linking shared-object redcarpet.bundle
 
 make "DESTDIR=" install
 <<<<<<< HEAD
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20150503-17005-yin06u
 =======
 /usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20150427-70418-cnnipd
 >>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
+=======
+/usr/bin/install -c -m 0755 redcarpet.bundle ./.gem.20150503-38115-1ual80
+>>>>>>> will-paginate

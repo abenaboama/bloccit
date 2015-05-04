@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150503-17005-kwatty.rb extconf.rb
 =======
 /Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150427-70418-1o62xz8.rb extconf.rb
 >>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
+=======
+/Users/abenaofori/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150503-91943-zlo6q1.rb extconf.rb
+>>>>>>> will-paginate
 creating Makefile
 
 make "DESTDIR=" clean
@@ -49,7 +53,11 @@ linking shared-object bcrypt_ext.bundle
 
 make "DESTDIR=" install
 <<<<<<< HEAD
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20150503-17005-usuyqg
 =======
 /usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20150427-70418-oio8fh
 >>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
+=======
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20150503-91943-imj45t
+>>>>>>> will-paginate

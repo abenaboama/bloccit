@@ -1,7 +1,7 @@
 require 'faker'
 
  # Create Users
- 5.times do
+ 20.times do
    user = User.new(
      name:     Faker::Name.name,
      email:    Faker::Internet.email,
@@ -13,7 +13,7 @@ require 'faker'
  users = User.all
 
  # Create Topics
- 15.times do
+ 60.times do
    Topic.create!(
      name:         Faker::Lorem.sentence,
      description:  Faker::Lorem.paragraph
@@ -22,7 +22,7 @@ require 'faker'
  topics = Topic.all
 
  # Create Summaries
- 5.times do
+ 20.times do
    Summary.create!(
      name:         Faker::Lorem.sentence,
      description:  Faker::Lorem.paragraph
@@ -46,6 +46,7 @@ require 'faker'
     topic:  topics.sample,
     title:  Faker::Lorem.sentence,
     body:   Faker::Lorem.paragraph
+
    )
 
     # set the created_at to a time within the past year
@@ -55,7 +56,7 @@ require 'faker'
  posts = Post.all
  
  # Create Comments
- 100.times do
+ 150.times do
    Comment.create!(
      user: users.sample,   # we have not yet associated Users with Comments
      post: posts.sample,

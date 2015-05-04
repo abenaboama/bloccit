@@ -56,6 +56,7 @@ have_iconv?: checking for iconv using --with-opt-* flags... --------------------
 Undefined symbols for architecture x86_64:
   "_iconv", referenced from:
 <<<<<<< HEAD
+<<<<<<< HEAD
       _main in conftest-911eff.o
   "_iconv_open", referenced from:
       _main in conftest-911eff.o
@@ -64,6 +65,11 @@ Undefined symbols for architecture x86_64:
   "_iconv_open", referenced from:
       _main in conftest-c63d66.o
 >>>>>>> 1edc69a1c626c0e03599f1733484ed3721f98ac6
+=======
+      _main in conftest-d886ed.o
+  "_iconv_open", referenced from:
+      _main in conftest-d886ed.o
+>>>>>>> will-paginate
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
