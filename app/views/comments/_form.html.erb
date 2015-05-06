@@ -1,20 +1,11 @@
-<%= form_for [topic, post, comment] do |f| %>
-          <% if comment.errors.any? %>
-    <div class="alert alert-danger">
-      <h4>There are <%= pluralize(comment.errors.count, "error") %>.</h4>
-      <ul>
-        <% comment.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+<% if current_user %>
+  <h4>Add a Comment</h4>
+  <%= form_for [@post, @post.comments.build] do |f| %>
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_field :body, placeholder: "Enter comment." %>
+    <div class="form-group">
+      <%= f.submit "Create Comment", class: 'btn btn-success' %>
     </div>
   <% end %>
-  <%= form_group_tag(comment.errors[:body]) do %>
-    <%= f.label :Create_new_comment %>
-    <%= f.text_field :body, class: 'form-control', placeholder: "Enter comment here" %>
-  <% end %>
-  <div class="form-group">
-    <%= f.submit "Save", class: 'btn btn-success' %>
-  </div>
 <% end %>
-
