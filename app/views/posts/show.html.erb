@@ -1,4 +1,4 @@
-<div class="row">
+ <div class="row">
   <div class="col-md-8">
     <%= render partial: 'votes/voter', locals: {post: @post}%>
     <h1><%= markdown_to_html @post.title %></h1>
@@ -10,7 +10,7 @@
     <p><%= markdown_to_html @post.body %></p>
     <p><%= markdown_to_html('***') %></p>
     <h3>Comments</h3>
-      <% @comments.each do |comment| %>
+      <% @comment.each do |comment| %>
         <%= render template: 'comments/_comment', locals: {comment: comment}%>
       <% end %>
     <p><%= markdown_to_html('---') %></p>
